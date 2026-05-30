@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXZ Language - Web IDE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ BXZ Language v1.0.0</h1>
+            <p>Polyglot Programming Language with Web IDE</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="editor-section">
+                <div class="section-header">
+                    <span>📝 Code Editor</span>
+                    <button id="runBtn" class="run-btn">▶ Run Code</button>
+                </div>
+                <textarea id="codeEditor" placeholder='Write BXZ code here...&#10;&#10;print("Hello World!")&#10;let x = 10&#10;let y = 20&#10;print(x + y)&#10;&#10;func square(n) {&#10;    return n * n&#10;}&#10;print(square(5))'></textarea>
+            </div>
+            
+            <div class="output-section">
+                <div class="section-header">
+                    <span>📤 Output</span>
+                    <button id="clearBtn" class="clear-btn">🗑 Clear</button>
+                </div>
+                <div id="output" class="output-area"></div>
+            </div>
+        </div>
+        
+        <div class="examples-section">
+            <h3>📚 Examples</h3>
+            <div class="examples-grid">
+                <div class="example-card" data-code='print("Hello World!")'>Hello World</div>
+                <div class="example-card" data-code='let x = 10\nlet y = 20\nprint(x + y)'>Variables</div>
+                <div class="example-card" data-code='func fact(n) {\n    if (n <= 1) {\n        return 1\n    }\n    return n * fact(n - 1)\n}\nprint(fact(5))'>Fibonacci</div>
+                <div class="example-card" data-code='python("print(\"Hello from Python!\")")'>Python Integration</div>
+                <div class="example-card" data-code='js("console.log(\"Hello from JS!\")")'>JavaScript</div>
+                <div class="example-card" data-code='html("<h1>Generated Page</h1><p>BXZ is awesome!</p>")'>HTML Generator</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

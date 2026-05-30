@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.editor-section, .output-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.section-header {
+    background: #2d3748;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+#codeEditor {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: none;
+    resize: vertical;
+    background: #f7fafc;
+    color: #2d3748;
+}
+
+#codeEditor:focus {
+    outline: none;
+    background: white;
+}
+
+.output-area {
+    height: 400px;
+    padding: 20px;
+    background: #1a202c;
+    color: #68d391;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.output-area p {
+    margin: 5px 0;
+    padding: 5px;
+    border-left: 3px solid #68d391;
+    padding-left: 10px;
+}
+
+.run-btn, .clear-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.run-btn {
+    background: #48bb78;
+    color: white;
+}
+
+.run-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+}
+
+.clear-btn {
+    background: #718096;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #4a5568;
+}
+
+.examples-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.examples-section h3 {
+    margin-bottom: 15px;
+    color: #2d3748;
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.example-card {
+    padding: 12px;
+    background: #edf2f7;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.example-card:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.error {
+    color: #fc8181;
+    border-left-color: #fc8181 !important;
+}
+
+.success {
+    color: #68d391;
+}
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}

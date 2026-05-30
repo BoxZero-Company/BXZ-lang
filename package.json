@@ -1,0 +1,31 @@
+{
+  "name": "bxz-lang",
+  "version": "1.0.0",
+  "description": "BXZ Programming Language",
+  "main": "src/cli/index.js",
+  "bin": {
+    "bxz": "dist/cli/bxz.js"
+  },
+  "scripts": {
+    "start": "node src/cli/index.js",
+    "dev": "node src/cli/index.js", 
+    "build": "npm run build:cli && npm run build:core && npm run build:vm && npm run build:loader",
+    "build:cli": "esbuild src/cli/index.js --bundle --outfile=dist/cli/bxz.js --platform=node --format=cjs",
+    "build:core": "esbuild src/cli/core/index.js --bundle --outdir=dist/core --platform=node --format=esm",
+    "build:vm": "esbuild src/cli/index.js --bundle --outdir=dist/vm --platform=node --format=esm",
+    "build:loader": "esbuild src/cli/loader/index.js --bundle --outdir=dist/loader --platform=node --format=esm",
+    "test": "echo \"Tests not implemented yet\" && exit 0",
+    "fmt": "node tools/formatter.js", 
+    "check": "node tools/analyzer.js" 
+  },
+  "keywords": ["compiler", "bxz", "language"],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.0.0",
+    "yargs": "^17.0.0",
+    "esbuild": "^0.20.0" 
+  },
+  "devDependencies": {
+  }
+}

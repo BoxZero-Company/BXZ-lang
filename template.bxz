@@ -1,0 +1,12 @@
+// BXZ Program
+// Created with BXZ IDE
+
+print("Hello BXZ World!");
+
+// Variables
+let name = "Developer";
+let version = "1.0.0";
+
+print("Welcome " + name + " to BXZ v" + version);
+
+// Your code here...

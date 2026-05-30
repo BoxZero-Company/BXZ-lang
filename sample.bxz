@@ -1,0 +1,34 @@
+// Hello World in BXZ
+print("Hello BXZ World!");
+
+// Variables
+let name = "Farhad";
+let age = 25;
+print("Name: " + name);
+print("Age: " + age);
+
+// Function
+func greet(person) {
+    return "Hello, " + person;
+}
+
+print(greet(name));
+
+// Array
+let numbers = [1, 2, 3, 4, 5];
+print("Numbers: " + numbers);
+
+// Loop
+for (let i = 0; i < 5; i = i + 1) {
+    print("Count: " + i);
+}
+
+// Conditional
+let score = 85;
+if (score >= 90) {
+    print("Grade: A");
+} else if (score >= 80) {
+    print("Grade: B");
+} else {
+    print("Grade: C");
+}
