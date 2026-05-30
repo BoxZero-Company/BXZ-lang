@@ -1,0 +1,22 @@
+// Hello World
+print("Hello BXZ!")
+
+// Variables
+let x = 10
+let y = 20
+print(x + y)
+
+// Functions
+func add(a, b) {
+    return a + b
+}
+print(add(5, 3))
+
+// Python integration
+python("print('Hello from Python!')")
+
+// JavaScript
+js("console.log('Hello from JS!')")
+
+// HTML
+html("<h1>Generated Page</h1>")

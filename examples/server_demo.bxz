@@ -1,0 +1,12 @@
+// BXZ Web Server Demo
+// This demonstrates creating a web server
+
+print("=" * 40)
+print("BXZ Web Server Demo v1.1.0")
+print("=" * 40)
+
+// Start web server on port 8080
+server(8080)
+
+print("Server running at http://localhost:8080")
+print("Press Ctrl+C to stop")

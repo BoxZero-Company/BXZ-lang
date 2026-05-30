@@ -1,0 +1,70 @@
+// Examples/test.bxz
+
+// Basic variable declaration and print
+let greeting = "Hello, Samyar!";
+print(greeting);
+
+// Arithmetic operations
+let a = 10;
+let b = 5;
+let sum = a + b;
+let product = a * b;
+print("Sum:", sum); // Output: Sum: 15
+print("Product:", product); // Output: Product: 50
+
+// Conditional statement
+if (sum > 12) {
+    print("Sum is greater than 12.");
+} else {
+    print("Sum is not greater than 12.");
+}
+
+// Function definition and call
+func calculateArea(radius) {
+    // Using PI from prelude
+    let area = PI * radius * radius;
+    return area; // Return statement needs to be implemented in compiler/parser
+}
+
+// Note: Return statement is not fully supported yet.
+// Let's simulate it by directly using the calculation logic here.
+let radius = 7;
+// let circleArea = calculateArea(radius); // This call would fail if return isn't handled
+let circleAreaCalculation = PI * radius * radius;
+print("Area of circle with radius", radius, "is approximately", circleAreaCalculation);
+
+// Calling JS directly
+js("console.log('This is a direct JavaScript log.');");
+
+// Calling Python
+let pyResult = py("print(2**10)"); // Executes Python, prints 1024
+print("Python result:", pyResult); // Note: Capture of stdout needs refinement
+
+// Generating HTML file
+html("examples/output.html") {
+    <h1>Welcome to BXZ Generated Page</h1>
+    <p>This page was created using the BXZ language.</p>
+    <p>Current time: { new Date().toLocaleTimeString() }</p>
+}
+
+// Generating CSS file (basic placeholder)
+// css("examples/styles.css") {
+//     body { background-color: lightblue; }
+//     h1 { color: navy; }
+// }
+// Note: The compiler doesn't currently process nested content for CSS like it does for HTML.
+// You'd typically write CSS directly in the file or use a separate mechanism.
+// For now, generating an empty CSS file or writing content directly:
+css("examples/styles.css") {
+    "body { background-color: lightblue; }\nh1 { color: navy; }"
+}
+
+
+// Example using variables defined in prelude
+print("Value of PI from prelude:", PI);
+
+// Example of an unknown directive (should show a warning)
+// unknown("some data");
+
+// Example of a potentially undeclared variable (should warn)
+// print(undeclaredVariable);

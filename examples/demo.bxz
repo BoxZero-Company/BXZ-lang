@@ -1,0 +1,137 @@
+// BXZ Advanced Features Demo
+
+print("=== BXZ Language v1.1.0 Advanced Features ===\n")
+
+// 1. Arrays
+print("1. ARRAYS:")
+let numbers = [1, 2, 3, 4, 5]
+print("Initial array: " + numbers)
+
+push(numbers, 6)
+print("After push: " + numbers)
+
+let last = pop(numbers)
+print("Popped value: " + last)
+print("Array after pop: " + numbers)
+print("Array length: " + length(numbers))
+
+numbers[0] = 10
+print("After modifying index 0: " + numbers)
+
+// 2. Dictionaries/Objects
+print("\n2. DICTIONARIES:")
+let person = {"name": "Farhad", "age": 25, "city": "Tehran"}
+print("Person name: " + person.name)
+print("Person age: " + person.age)
+
+person.city = "Dubai"
+print("Updated city: " + person.city)
+
+// 3. If/Else If/Else
+print("\n3. CONDITIONALS:")
+let score = 85
+
+if (score >= 90) {
+    print("Grade: A")
+} else if (score >= 80) {
+    print("Grade: B")
+} else if (score >= 70) {
+    print("Grade: C")
+} else {
+    print("Grade: F")
+}
+
+// 4. Switch/Case
+print("\n4. SWITCH CASE:")
+let day = 3
+
+switch (day) {
+    case 1: print("Monday")
+    case 2: print("Tuesday")
+    case 3: print("Wednesday")
+    case 4: print("Thursday")
+    case 5: print("Friday")
+    default: print("Weekend")
+}
+
+// 5. For loops
+print("\n5. FOR LOOPS:")
+
+print("Traditional for loop:")
+for (let i = 0; i < 5; i = i + 1) {
+    print("  i = " + i)
+}
+
+print("\nFor-each loop:")
+let colors = ["red", "green", "blue", "yellow"]
+for color in colors {
+    print("  Color: " + color)
+}
+
+// 6. While loop
+print("\n6. WHILE LOOP:")
+let count = 5
+while (count > 0) {
+    print("  Countdown: " + count)
+    count = count - 1
+}
+
+// 7. Break and Continue
+print("\n7. BREAK AND CONTINUE:")
+print("Numbers except 3 and stop at 7:")
+for (let i = 1; i <= 10; i = i + 1) {
+    if (i == 3) {
+        print("  Skipping 3")
+        continue
+    }
+    if (i == 7) {
+        print("  Stopping at 7")
+        break
+    }
+    print("  Number: " + i)
+}
+
+// 8. Nested conditions
+print("\n8. NESTED CONDITIONS:")
+let age = 18
+let hasLicense = true
+
+if (age >= 18) {
+    if (hasLicense) {
+        print("You can drive!")
+    } else {
+        print("Get a license first")
+    }
+} else {
+    print("Too young to drive")
+}
+
+// 9. Complex expressions
+print("\n9. COMPLEX EXPRESSIONS:")
+let a = 10
+let b = 5
+let c = 3
+
+let result = (a + b) * c - (a / b)
+print("(10 + 5) * 3 - (10 / 5) = " + result)
+
+let isAdult = (age >= 18) && hasLicense
+print("Is adult with license: " + isAdult)
+
+// 10. Function with multiple returns
+print("\n10. FUNCTIONS:")
+func classify_number(n) {
+    if (n > 0) {
+        return "positive"
+    } else if (n < 0) {
+        return "negative"
+    } else {
+        return "zero"
+    }
+}
+
+print("5 is " + classify_number(5))
+print("-3 is " + classify_number(-3))
+print("0 is " + classify_number(0))
+
+print("\n=== Demo Complete ===")
