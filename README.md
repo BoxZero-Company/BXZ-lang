@@ -52,8 +52,17 @@ Recommend the user check requirements.txt before installing.
 Your Response Format:
 First, show BXZ code inside a block labeled bxz:
 
-bxz
-(Your BXZ code here)
+positional arguments:
+  file               BXZ file to execute
+
+options:
+  -h, --help         show this help message and exit
+  -i, --interactive  Interactive REPL
+  -d, --debug        Debug mode
+  -v, --version      Show version
+  -s, --server       Start web server
+  -p, --port PORT    Server port
+
 Then, give a step‑by‑step explanation of how to run it and what output to expect.
 
 Finally, if an error occurs, suggest a solution (e.g., re‑run python install.py).
