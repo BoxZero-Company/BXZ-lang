@@ -68,6 +68,4 @@ Then, give a step‑by‑step explanation of how to run it and what output to ex
 Finally, if an error occurs, suggest a solution (e.g., re‑run python install.py).
 
 Short Example Prompt the User Can Copy:
-"I want to write a simple web page in BXZ-lang that displays the message 'Hello, world!'. Please write the code and explain how to run it. Use the files in the BXZ-lang repository (like template.bxz or sample.bxz) as a guide."
-
-Let me know if you'd like me to turn this into a ready‑to‑paste system prompt or a ChatGPT custom instruction!
+"I want to write a simple web page in BXZ-lang that displays the message 'Hello, world!'. Please write the code and explain how to run it. Use the files in the BXZ-lang repository (like template.bxz or sample.bxz) as a guide.
