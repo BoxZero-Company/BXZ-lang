@@ -1,0 +1,16 @@
+[package]
+name = "bxz-lang"
+version = "1.2.2"
+edition = "2021"
+authors = ["BXZ Language Team"]
+description = "BXZ-lang compiler/runtime foundation"
+build = "build.rs"
+
+[[bin]]
+name = "bxz"
+path = "src/main.rs"
+
+[dependencies]
+
+[build-dependencies]
+winres = "0.1"

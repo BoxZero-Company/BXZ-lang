@@ -1,0 +1,3 @@
+unit hello
+  emit << "Hello from BXZ!"
+seal

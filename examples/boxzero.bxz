@@ -1,0 +1,6 @@
+unit boxzero
+  hold title := "BXZ Language"
+  hold release := "v1.2.2.1"
+  emit << title
+  emit << release
+seal

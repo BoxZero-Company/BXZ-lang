@@ -1,0 +1,4 @@
+unit smoke
+  hold message := "BXZ smoke test"
+  emit << message
+seal

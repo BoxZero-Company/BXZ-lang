@@ -1,0 +1,6 @@
+unit variables
+  hold name := "Samyar"
+  hold version := "v1.2.2.1"
+  emit << name
+  emit << version
+seal
